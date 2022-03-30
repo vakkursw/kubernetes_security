@@ -8,6 +8,6 @@ roleRef:
   kind: Role
   name: pod-reader
 subjects:
-- apiGroup: rbac.authorization.k8s.io
-  kind: ServiceAccount # User, Group or Service Account
+- kind: ServiceAccount # User, Group or Service Account
   name: my-sa
+  namespace: default
