@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: container-sc
+  name: container-sc
+spec:
+  securityContext:
+    runAsUser: 999
+    runAsGroup: 3000
+  containers:
+  - command:
+    - sh
+    - -c
+    - sleep 1d
+    image: busybox
+    name: sh
+    securityContext:
+      runAsNonRoot: true
